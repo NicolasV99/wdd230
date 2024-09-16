@@ -92,6 +92,10 @@ main h1{
     padding: 1rem;
 }
 
+.info-list li{
+    padding: 10px;
+}
+
 
 footer {
     text-align: center;
