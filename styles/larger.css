@@ -38,6 +38,7 @@
     main h1{
         border-bottom: 1px solid #333;
         padding-bottom: 0px;
+        font-size: 24px;
     }
 
     .card-container {
@@ -51,8 +52,13 @@
         padding: 0px;
     }
 
+    .card h2{
+        font-size: 20px;
+    }
+
     .card li{
         list-style-type: none;
+        font-size: 16px;
     }
     
     .card .learn-list{
