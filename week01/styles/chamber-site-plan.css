@@ -72,7 +72,7 @@ main{
     min-width: 300px;
     margin: 30px auto;
     text-align: center;
-    border-collapse: collapse; /* Mantiene la estructura de la tabla unida */
+    border-collapse: collapse; 
 }
 
 .colors th, .colors td {
