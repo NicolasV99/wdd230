@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 
 :root{
     --primary-background: #FFFFFF;
-    --second-background: #ccc;
+    --second-background: #002349;
+    --accent-background: #f9f9f9;
 
     --header-font: 'Poppins', serif;
     --body-font: 'Inter', sans-serif;
 
-    --first-font-color: #000;
-    --second-font-color: #fff;
+    --first-font-color: #fff;
+    --second-font-color: #000;
+    --accent-font-color: #002349;
 }
 
 /* Global Styles */
@@ -18,7 +18,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ffffff;
-    color: #333;
+    color: var(--second-font-color);
     overflow-x: hidden;
 }
 
@@ -29,10 +29,12 @@ h1, h2, h3 {
 
 h2{
     font-size: 30px;
+    color: var(--accent-font-color);
 }
 
 h3{
     font-size: 22px;
+    color: var(--accent-font-color);
 }
 
 header, footer{
@@ -41,6 +43,7 @@ header, footer{
     right: 0;
     box-sizing: border-box;
     padding: 10px 0;
+    color: var(--first-font-color);
     background-color: var(--second-background);
     text-align: center;
 }
@@ -54,8 +57,8 @@ main{
 }
 
 .card{
-    background-color: var(--second-background);
-    border: 1px solid #1A1A1A;
+    background-color: var(--accent-background);
+    border: 1px solid #002349;
     box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     max-width: 90%;
@@ -72,12 +75,12 @@ main{
 }
 
 .colors th{
-    background-color: var(--primary-background);
+    background-color: transparent;
     padding: 15px;
     border-radius: 8px;
 }
 .colors td{
-    border: 1px solid #fff;
+    border: 1px solid #002349;
     padding: 15px;
     border-radius: 8px;
 }
