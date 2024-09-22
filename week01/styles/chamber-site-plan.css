@@ -67,21 +67,17 @@ main{
     border-radius: 8px;
 }
 
-.colors{
+.colors {
     width: 100%;
     min-width: 300px;
     margin: 30px auto;
     text-align: center;
+    border-collapse: collapse; /* Mantiene la estructura de la tabla unida */
 }
 
-.colors th{
-    background-color: transparent;
+.colors th, .colors td {
     padding: 15px;
-    border-radius: 8px;
-}
-.colors td{
     border: 1px solid #002349;
-    padding: 15px;
     border-radius: 8px;
 }
 
@@ -121,9 +117,29 @@ main{
     padding: 0 10px;
 }
 
-@media only screen and (max-width:1040px){
+@media only screen and (max-width:600px){
     main{
         padding-top: 50px;
         max-width: 100%;
     }
+    
+    .colors tr {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .colors th, .colors td {
+        display: block; 
+        text-align: left; 
+        width: 80%;
+    }
+
+    .colors th {
+        background-color: #f0f0f0; 
+    }
+
+    .colors td {
+        background-color: #ffffff;
+    }
+
 }
