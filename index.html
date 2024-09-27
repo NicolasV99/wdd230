@@ -11,6 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="images/favicon-logo.png">
+    <meta property="og:title" content="Nicolas Velasquez - WDD 230 - Web Frontend Development" />
+    <meta property="og:type" content="Demonstrate knowledge by applying HTML and CSS in the design and development of a website from course assignment portal" />
+    <meta property="og:url" content="https://www.nicodev.com/" />
+    <meta property="og:image" content="https://www.spatial.io/_next/image?url=https%3A%2F%2Fmodels.readyplayer.me%2F63f63e739233b3995d6da501.png%3Fscene%3Dfullbody-portrait-closeupfront&w=640&q=75" />
     <script src="scripts/getDates.js" defer></script>
 </head>
 <body>
@@ -18,8 +23,10 @@
         <div class="header-content">
             <img src="images/profile.png" alt="headshot">
             <span>Nicolas Velasquez</span>
+            <button id="menu-button" class="hamburger" aria-label="Toggle menu">&#9776;</button>
+            <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Toggle dark mode">🌙</button>
         </div>
-        <nav>
+        <nav id="menu-items" class="menu">
             <a href="/index.html">Home</a>
             <a href="">Chamber</a>
             <a href="/wdd230/week01/chamber-site-plan.html">Site Plan</a>

@@ -30,6 +30,60 @@
         color: #333;
     }
 
+    /* Hide the hamburger button in desktop*/
+    .hamburger {
+        display: none;
+    }
+
+    
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: #000;
+    }
+
+    .menu a {
+        padding: 10px 20px; 
+        text-align: center;
+    }
+
+
+    /* Dark mode styles for desktop */
+    body.dark-mode {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+
+    .dark-mode main {
+        background-color: #1f1f1f;
+    }
+
+    .dark-mode header, .dark-mode footer {
+        background-color: #333;
+        color: #fff;
+    }
+
+    .dark-mode .card {
+        background-color: #2a2a2a;
+    }
+
+    .dark-mode .card h2 {
+        background-color: #444;
+    }
+
+    .dark-mode .menu a {
+        color: #fff;
+        background-color: #444;
+    }
+
+    .dark-mode .menu a:hover {
+        background-color: #333;
+        color: #fff;
+    }
+
+    /*END*/
+
     main {
         max-width: 960px;
         margin: 0 auto;
