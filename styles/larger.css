@@ -78,8 +78,8 @@
     }
 
     .dark-mode .menu a:hover {
-        background-color: #333;
-        color: #fff;
+        background-color: #fff;
+        color: #000;
     }
 
     /*END*/

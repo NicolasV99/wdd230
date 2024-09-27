@@ -66,12 +66,12 @@ body.dark-mode {
 }
 
 .dark-mode .menu a {
-    color: #fff;
-    background-color: #444;
+    color: #000;
+    background-color: #fff;
 }
 
 .dark-mode .menu a:hover {
-    background-color: #333;
+    background-color: #1a1a1a;
     color: #fff;
 }
 
@@ -91,19 +91,18 @@ body.dark-mode {
     display: block;
 }
 
-/* Hide the menu for default */
+/* Cambiar el icono a "X" cuando el menú esté abierto */
+.hamburger.open {
+    content: "✖"; /* Mostrar "X" cuando esté abierto */
+}
+
+/* Estilos del menú oculto */
 .menu {
     display: none;
     flex-direction: column;
     background-color: #000;
 }
 
-.menu a {
-    padding: 10px;
-    text-align: center;
-}
-
-/* Show the menu when is clicked(open) */
 .menu.open {
     display: flex;
     flex-direction: column;
