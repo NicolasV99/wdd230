@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolas Velasquez - WDD 230 - Web Frontend Development </title>
+    <meta name="description" content="WDD 230 - Web Frontend Development - Nicolas Velasquez - Demonstrate knowledge by applying HTML and CSS in the design and development of a page from course assignment portal">
+    <meta name="author" content="Nicolas Velasquez">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="images/favicon.png">
+    <script src="scripts/chamber.js" defer></script>
+    <meta property="og:title" content="Conecta Calima" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="Conecta Calima site is to serve as a comprehensive resource for local entrepreneurs, promoting economic growth and community development.">
+    <meta property="og:url" content="https://www.conectacalima.com/" />
+    <meta property="og:image" content="https://www.spatial.io/_next/image?url=https%3A%2F%2Fmodels.readyplayer.me%2F63f63e739233b3995d6da501.png%3Fscene%3Dfullbody-portrait-closeupfront&w=640&q=75" />
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Conecta Calima Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="#">Directory</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#" class="btn-connect">Let's Connect</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section (Opening) -->
+        <section class="hero">
+            <img src="images/hero-image.jpg" alt="Calima Darien Landscape" class="hero-img">
+            <div class="hero-content">
+                <h1>Bienvenidos a Conecta Calima</h1>
+                <p>Conectando negocios, personas y oportunidades en Calima Darien</p>
+                <a href="#" class="btn-primary">Únete a la Cámara de Comercio</a>
+            </div>
+        </section>
+
+        <!-- Current Events Section -->
+        <section class="current-events">
+            <h2>Eventos Actuales</h2>
+            <div class="events-list">
+                <article class="event">
+                    <h3>Evento Empresarial</h3>
+                    <p>Únete a nuestro próximo evento de networking para empresarios locales el 15 de octubre.</p>
+                </article>
+                <article class="event">
+                    <h3>Feria Turística</h3>
+                    <p>Participa en nuestra feria turística el 25 de noviembre en el parque central.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Weather Card Section -->
+        <section class="weather-card">
+            <h2>El Clima en Calima</h2>
+            <div class="weather-content">
+                <!-- Weather info will be dynamically added with JavaScript -->
+                <div class="weather-info">
+                    <p>☀️ 30°C - Soleado</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Spotlights Section -->
+        <section class="company-spotlights">
+            <h2>Empresas Destacadas</h2>
+            <div class="spotlights-list">
+                <article class="spotlight">
+                    <img src="images/company1.jpg" alt="Empresa 1">
+                    <h3>Empresa 1</h3>
+                    <p>Descubre cómo esta empresa está impulsando la innovación en Calima.</p>
+                </article>
+                <article class="spotlight">
+                    <img src="images/company2.jpg" alt="Empresa 2">
+                    <h3>Empresa 2</h3>
+                    <p>Un ejemplo de excelencia en servicios turísticos.</p>
+                </article>
+                <article class="spotlight">
+                    <img src="images/company3.jpg" alt="Empresa 3">
+                    <h3>Empresa 3</h3>
+                    <p>Apoyando el desarrollo sostenible en nuestra región.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <img src="images/logo-footer.png" alt="Conecta Calima Logo">
+        </div>
+        <p>© 2024 Conecta Calima. Todos los derechos reservados.</p>
+        <p><a href="#">Contáctenos</a> | <a href="#">Aviso Legal</a></p>
+        <p>©<span id="currentYear"></span>🌎 Nicolas Velasquez 🌎 Colombia</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

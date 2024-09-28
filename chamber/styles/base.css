@@ -1,0 +1,13 @@
+:root{
+    --primary-background: #FFFFFF;
+    --second-background: #002349;
+    --accent-background: #f9f9f9;
+
+    --header-font: 'Poppins', serif;
+    --body-font: 'Inter', sans-serif;
+
+    --first-font-color: #fff;
+    --second-font-color: #000;
+    --accent-font-color: #002349;
+}
+
