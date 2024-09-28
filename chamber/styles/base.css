@@ -1,13 +1,97 @@
-:root{
-    --primary-background: #FFFFFF;
-    --second-background: #002349;
-    --accent-background: #f9f9f9;
-
-    --header-font: 'Poppins', serif;
-    --body-font: 'Inter', sans-serif;
-
-    --first-font-color: #fff;
-    --second-font-color: #000;
-    --accent-font-color: #002349;
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+
+h1, h2, h3{
+    font-family: "Poppins" , "serif";
+    text-transform: uppercase;
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #002349;
+    
+}
+
+nav .logo img {
+    width: 80px;
+}
+
+.nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #002349;
+    opacity: .99;
+    position: absolute;
+    top: 100px; /* Adjust based on your header height */
+    right: 0;
+    width: 100%;
+    text-align: center;
+    font-family: "Poppins" , "serif";
+    text-transform: uppercase;
+}
+
+.nav-links li {
+    list-style: none;
+    padding-bottom: 5px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem;
+    display: block;
+}
+
+.nav-links a:hover{
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+}
+
+.burger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+/* Show nav menu when burger is clicked */
+.nav-active {
+    display: flex;
+}
+
+/* Button Styles */
+.btn-connect {
+    background-color: transparent;
+    color: #fff!important;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-connect:hover {
+    background-color: #fff;
+    color: #002349!important;
+}

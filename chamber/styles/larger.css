@@ -1,0 +1,24 @@
+@media (min-width: 710px){
+    /* Navigation styles for larger screens */
+nav {
+    padding: 1.5rem 2rem;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    justify-content: flex-end;
+    background-color: transparent;
+}
+
+.nav-links a {
+    color: #fff;
+    padding: 1rem;
+}
+
+.burger {
+    display: none; /* Hide burger menu on larger screens */
+}
+
+}
