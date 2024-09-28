@@ -24,6 +24,49 @@ nav {
 
 /*END HEADER CODE*/
 
+/*START HERO CODE*/
+
+
+/* Hero Section for Desktop */
+.hero {
+    height: 85vh; /* Taller on larger screens */
+}
+
+.hero-content {
+    top: 40%; /* Position slightly higher */
+}
+
+.hero-content h1 {
+    font-size: 3.5rem; /* Larger font for desktop */
+}
+
+.btn-primary {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+}
+
+/*END HERO CODE*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*START FOOTER CODE*/
 
