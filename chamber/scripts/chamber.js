@@ -10,10 +10,11 @@ lastModifiedElement.textContent = `Last Modification: ${lastModifiedDate.toLocal
 
 
 
-// Toggle burger menu
+// Toggle burger menu and X icon
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-links');
 
 burger.addEventListener('click', () => {
     nav.classList.toggle('nav-active');
+    burger.classList.toggle('toggle'); // Toggle the X animation
 });

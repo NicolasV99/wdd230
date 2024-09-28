@@ -1,5 +1,6 @@
 @media (min-width: 710px){
-    /* Navigation styles for larger screens */
+
+/*START HEADER CODE*/
 nav {
     padding: 1.5rem 2rem;
 }
@@ -20,5 +21,70 @@ nav {
 .burger {
     display: none; /* Hide burger menu on larger screens */
 }
+
+/*END HEADER CODE*/
+
+
+/*START FOOTER CODE*/
+
+/* Footer styles for desktop */
+footer {
+    padding: 1.5rem 3rem;
+}
+
+/* Align top section (logo + links) in a single line */
+.top-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.left-section p.disclaimer{
+    margin-left: 20px;
+}
+
+.footer-logo{
+    margin-bottom: 0;
+}
+
+.footer-logo img {
+    width: 80px;
+    margin-right: 2rem; /* Spacing between the logo and text */
+}
+
+.left-section p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Style for the horizontal line */
+hr {
+    border: 0;
+    border-top: 1px solid #fff;
+    opacity: 0.5;
+    margin: 1.5rem 0;
+}
+
+/* Bottom section in a single line and aligned to the right */
+.bottom-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.bottom-section p {
+    margin-left: 2rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/*END FOOTER CODE*/
 
 }
