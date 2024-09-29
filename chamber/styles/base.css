@@ -307,42 +307,42 @@ nav .logo img {
     transform: scale(1.02); 
 }
 
-.spotlight-card a {
+.spotlight-card a{
     position: relative;
     color: #000;
     text-decoration: none;
-    &:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 1px;
-        background: grey!important;
-        -webkit-transition: .3s linear;
-        -webkit-transition: .3s linear;
-        transition: .3s linear;
-    }
-    &:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0%;
-        height: 1px;
-        background: #002349!important;
-        -webkit-transition: .3s linear;
-        -webkit-transition: .3s linear;
-        transition: .3s linear;
-    }
-    &:hover{
-        &:after{
-            width: 100%;
-        }
-        color: #002349;
-        letter-spacing: 1px;
-        transition: 0.3s ease;
-    }
+}
+
+.spotlight-card a:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: grey!important;
+    transition: .3s linear;
+}
+
+.spotlight-card a:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background: #002349!important;
+    transition: .3s linear;
+}
+
+.spotlight-card a:hover::after{
+    width: 100%;
+}
+
+.spotlight-card a:hover{
+    color: #002349;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
 }
 
 /*END SPOTLIGHT CODE*/
@@ -409,41 +409,42 @@ footer p {
     font-size: 0.9rem;
 }
 
-footer a {
+footer a{
     position: relative;
     color: #fff;
     text-decoration: none;
-    &:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 1px;
-        background: grey!important;
-        -webkit-transition: .3s linear;
-        -webkit-transition: .3s linear;
-        transition: .3s linear;
-    }
-    &:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0%;
-        height: 1px;
-        background: #fff!important;
-        -webkit-transition: .3s linear;
-        -webkit-transition: .3s linear;
-        transition: .3s linear;
-    }
-    &:hover{
-        &:after{
-            width: 100%;
-        }
-        letter-spacing: 1px;
-        transition: 0.3s ease;
-    }
+}
+
+footer a:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: grey!important;
+    transition: .3s linear;
+}
+
+footer a:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background: #fff!important;
+    transition: .3s linear;
+}
+
+footer a:hover::after{
+    width: 100%;
+}
+
+footer a:hover{
+    color: #fff;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
 }
 
 
