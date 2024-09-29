@@ -24,10 +24,8 @@ nav {
 
 /*END HEADER CODE*/
 
+
 /*START HERO CODE*/
-
-
-/* Hero Section for Desktop */
 .hero {
     height: 85vh; /* Taller on larger screens */
 }
@@ -48,25 +46,165 @@ nav {
 /*END HERO CODE*/
 
 
+/*START EVENTS CODE*/
+
+/* Current Events Section for Desktop */
+.current-events {
+    padding: 4rem 2rem;
+}
+
+.current-events h2{
+    font-size: 2rem;
+}
+
+.events-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem;
+}
+
+.event {
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.event:hover {
+    transform: translateY(-5px); 
+}
+
+.event h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.event p {
+    font-size: 1rem;
+}
+
+.event a {
+    font-size: 1rem;
+}
+
+/*END EVENTS CODE*/
 
 
 
 
+/*START WEATHER CODE*/
+
+/* Weather Card Section for Desktop */
+.weather-card {
+    background-color: #f3f3f3;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.weather-card h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.weather-content {
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.weather-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weather-info p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+.weather-info p::before {
+    margin-right: 0.5rem;
+}
 
 
 
 
+/*END WEATHER CODE*/
 
+/*START SPOTLIGHT CODE*/
+.company-spotlights {
+    background-color: #FFFFFF; 
+    padding: 20px;
+    text-align: center; 
+}
 
+.company-spotlights h2 {
+    margin-bottom: 20px; 
+    font-size: 2rem;
+}
 
+.spotlight-cards {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+}
 
+.spotlight-card {
+    background-color: #f3f3f3; 
+    border: 1px solid #f1f1f1; 
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 10px; 
+    flex: 1 1 30%; 
+    max-width: 30%; 
+}
 
+.spotlight-card h3 {
+    margin: 10px 0; 
+    font-size: 1.5rem;
+}
 
+/*END SPOTLIGHT CODE*/
 
+/*START CTA BLOCK SECTION CODE*/
 
+.cta-block {
+    text-align: center; /* Centra el texto */
+    padding: 40px; /* Mayor espacio interno para escritorio */
+    background-color: #f3f3f3; /* Fondo claro para el bloque CTA */
+}
 
+.cta-block h2 {
+    font-size: 2em; /* Aumenta el tamaño del título en escritorio */
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
 
+.cta-block p {
+    font-size: 1rem; /* Aumenta el tamaño del subtítulo en escritorio */
+    margin-bottom: 20px; /* Espacio debajo del subtítulo */
+}
 
+.social-icons {
+    display: flex; /* Usa flexbox para alinear los íconos */
+    justify-content: center; /* Centra los íconos */
+    gap: 25px; /* Espacio entre íconos más amplio en escritorio */
+}
+
+.social-icon img {
+    width: 50px; /* Tamaño de los íconos más grande en escritorio */
+    height: 50px; /* Mantiene la proporción de los íconos */
+}
+
+/*END CTA BLOCK SECTION CODE*/
 
 /*START FOOTER CODE*/
 
