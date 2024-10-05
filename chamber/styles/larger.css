@@ -89,9 +89,6 @@ nav {
 
 /*END EVENTS CODE*/
 
-
-
-
 /*START WEATHER CODE*/
 
 /* Weather Card Section for Desktop */
@@ -134,9 +131,6 @@ nav {
     margin-right: 0.5rem;
 }
 
-
-
-
 /*END WEATHER CODE*/
 
 /*START SPOTLIGHT CODE*/
@@ -178,33 +172,81 @@ nav {
 /*START CTA BLOCK SECTION CODE*/
 
 .cta-block {
-    text-align: center; /* Centra el texto */
-    padding: 40px; /* Mayor espacio interno para escritorio */
-    background-color: #f3f3f3; /* Fondo claro para el bloque CTA */
+    text-align: center; 
+    padding: 40px; 
+    background-color: #f3f3f3; 
 }
 
 .cta-block h2 {
-    font-size: 2em; /* Aumenta el tamaño del título en escritorio */
-    margin-bottom: 10px; /* Espacio debajo del título */
+    font-size: 2rem; 
+    margin-bottom: 10px; 
 }
 
 .cta-block p {
-    font-size: 1rem; /* Aumenta el tamaño del subtítulo en escritorio */
-    margin-bottom: 20px; /* Espacio debajo del subtítulo */
+    font-size: 1rem; 
+    margin-bottom: 20px; 
 }
 
 .social-icons {
-    display: flex; /* Usa flexbox para alinear los íconos */
-    justify-content: center; /* Centra los íconos */
-    gap: 25px; /* Espacio entre íconos más amplio en escritorio */
+    display: flex; 
+    justify-content: center; 
+    gap: 25px; 
 }
 
 .social-icon img {
-    width: 50px; /* Tamaño de los íconos más grande en escritorio */
-    height: 50px; /* Mantiene la proporción de los íconos */
+    width: 50px; 
+    height: 50px; 
 }
 
 /*END CTA BLOCK SECTION CODE*/
+
+
+
+/*START DISCOVER PAGE CODE*/
+
+.hero-discover {
+    height: 55vh; /* Taller on larger screens */
+}
+
+
+.sidebar h2{
+    font-size: 2rem; 
+    margin-bottom: 10px;
+}
+
+.sidebar h3{
+    font-size: 1.5rem;
+    margin: 2rem 0 0rem 0;
+}
+
+.gallery h2{
+    font-size: 2rem; 
+    margin-bottom: 10px;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Sidebar and main area */
+    gap: 20px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for desktop */
+    gap: 10px;
+}
+
+.image-grid img:hover {
+    transition: transform 0.3s ease;
+    transform: translateY(-5px);
+}
+
+
+
+
+/*END DISCOVER PAGE CODE*/
+
 
 /*START FOOTER CODE*/
 

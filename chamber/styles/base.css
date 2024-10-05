@@ -14,6 +14,7 @@ body {
 h1, h2, h3{
     font-family: "Poppins" , "serif";
     text-transform: uppercase;
+    color: #002349;
 }
 
 /* START HEADER CODE */
@@ -383,10 +384,92 @@ nav .logo img {
     transition: .2s ease;
     transform: scale(1.1);
 }
-
-
-
 /*END CTA SECTION CODE*/
+
+
+/*START DISCOVER PAGE CODE*/
+/* Hero Section for Mobile */
+.hero-discover {
+    position: relative;
+    width: 100%;
+    height: 50vh; 
+    overflow: hidden;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for mobile */
+    gap: 20px;
+    padding: 1rem;
+}
+
+.sidebar h2{
+    font-size: 1.5rem; 
+    margin: 30px 0 10px 0;
+}
+
+.sidebar h3{
+    font-size: 1rem;
+    margin: 2rem 0 0rem 0;
+}
+
+.gallery h2{
+    font-size: 1.5rem; 
+    margin-bottom: 10px;
+}
+
+.sidebar {
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.sidebar ul{
+    list-style: none;
+}
+
+.sidebar #visit-message{
+    background-color: #002349;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery {
+    padding: 20px;
+}
+
+.image-grid {
+    display: flex;
+    flex-direction: column; /* Columna para móvil */
+}
+
+figure {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.image-grid img {
+    border-radius: 1rem;
+    width: 100%;
+    height: 200px; /* Establecer altura fija */
+    object-fit: cover; /* Recortar la imagen para ajustarla */
+}
+
+figcaption {
+    text-align: center;
+    margin-top: 5px;
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+
+
+
+/*END DISCOVER PAGE CODE*/
+
 
 /*START FOOTER CODE*/
 

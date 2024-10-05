@@ -20,3 +20,31 @@ burger.addEventListener('click', () => {
 });
 
 
+// Get the visit message element
+const visitMessage = document.getElementById('visit-message');
+
+// Get the current date in milliseconds
+const currentDate = Date.now();
+
+// Check if there is a previous visit date stored
+const lastVisitDate = localStorage.getItem('lastVisitDate');
+
+if (!lastVisitDate) {
+    // First visit
+    visitMessage.innerHTML = "Welcome! Let us know if you have any questions.";
+} else {
+    // Calculate the time difference
+    const timeDifference = currentDate - lastVisitDate;
+    const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24)); // Convert milliseconds to days
+
+    if (daysDifference < 1) {
+        // Less than a day
+        visitMessage.innerHTML = "Back so soon! Awesome!";
+    } else {
+        // More than a day
+        visitMessage.innerHTML = `You last visited ${daysDifference} ${daysDifference === 1 ? "day" : "days"} ago.`;
+    }
+}
+
+// Store the current visit date
+localStorage.setItem('lastVisitDate', currentDate);
