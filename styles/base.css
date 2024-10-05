@@ -165,7 +165,7 @@ main h1{
     font-style: italic;
 }
 
-.hero-overlay h1{
+.hero-overlay p{
     border: none;
 }
 
@@ -220,7 +220,7 @@ main h1{
     width: 100%;
     height: 300px; /* Altura ajustada para móviles */
     border: 0;
-    loading: lazy; /* Asegura que se cargue de forma perezosa */
+    
 }
 
 footer {
