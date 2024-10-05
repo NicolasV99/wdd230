@@ -137,6 +137,39 @@ main h1{
     padding-bottom: 0px;
 }
 
+/*START HERO CODE*/
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 60vh; 
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 30px; /* Adjust as needed */
+    left: 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    white-space: nowrap; /* Prevent text wrapping */
+    font-size: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+.hero-overlay h1{
+    border: none;
+}
+
+
 .card-container{
     padding: 20px 0 0 0;
 }
@@ -175,6 +208,20 @@ main h1{
     padding: 10px;
 }
 
+.map-container {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 300px; /* Altura ajustada para móviles */
+    border: 0;
+    loading: lazy; /* Asegura que se cargue de forma perezosa */
+}
 
 footer {
     text-align: center;

@@ -36,6 +36,20 @@
         </nav>
     </header>
     <main>
+        <!-- Hero Section (Opening) -->
+        <section class="hero">
+            <picture>
+                <!-- Mobile view image -->
+                <source srcset="images/roma-temple-medium.webp" media="(max-width: 767px)">
+                <!-- Larger view image -->
+                <source srcset="images/roma-temple-larger.webp" media="(min-width: 768px)">
+                <!-- Fallback image -->
+                <img src="images/roma-temple-large.webp" alt="Italy Temple" class="hero-img" width="500" height="250">
+            </picture>
+            <div class="hero-overlay">
+                <h1>Italy Temple</h1>
+            </div>
+        </section>
         <h1>WDD 230: Web Frontend Development</h1>
         <div class="card-container"> 
             <section class="card">
@@ -57,6 +71,16 @@
                     <li>Page Visits: 1</li>
                 </ul>
             </section>
+        </div>
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31843.58855033767!2d-76.49839811626259!3d3.9274452215664044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e375f382a4469d7%3A0x8f3a9b8605d38bc6!2sCalima%20Dari%C3%A9n!5e0!3m2!1sen!2sco!4v1728143961434!5m2!1sen!2sco" referrerpolicy="no-referrer-when-downgrade"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
         </div>
     </main>
     <footer>
