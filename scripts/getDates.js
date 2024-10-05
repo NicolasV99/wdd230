@@ -28,3 +28,27 @@ menuButton.addEventListener('click', function() {
 document.getElementById('dark-mode-toggle').addEventListener('click', function() {
     document.body.classList.toggle('dark-mode');
 });
+
+
+// Function to handle the page visit counter
+function updatePageVisitCounter() {
+    // Check if the 'visitCount' is already in localStorage
+    let visitCount = localStorage.getItem('visitCount');
+
+    if (visitCount) {
+        // If exists, increment the counter
+        visitCount = parseInt(visitCount) + 1;
+    } else {
+        // If not, initialize it
+        visitCount = 1;
+    }
+
+    // Save the updated count in localStorage
+    localStorage.setItem('visitCount', visitCount);
+
+    // Update the content of the span with the new count
+    document.getElementById('page-visit-counter').textContent = visitCount;
+}
+
+// Call the function to update the counter on page load
+updatePageVisitCounter();
