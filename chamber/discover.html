@@ -47,7 +47,10 @@
     <main>
         <!-- Hero Section (Opening) -->
         <section class="hero-discover">
-            <img src="images//discover-hero-image.webp" alt="Calima Darien Landscape" class="hero-img">
+            <picture>
+                <source srcset="images/discover-hero-image.webp" media="(max-width: 960px)">
+                <img src="images/discover-hero-image.webp" alt="Calima Darien Landscape" class="hero-img" loading="lazy">
+            </picture>
             <div class="hero-content">
                 <h1>Discover</h1>
             </div>
