@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolas Velasquez - WDD 230 - Web Frontend Development </title>
+    <meta name="description" content="WDD 230 - Web Frontend Development - Nicolas Velasquez - Demonstrate knowledge by applying HTML and CSS in the design and development of a page from course assignment portal">
+    <meta name="author" content="Nicolas Velasquez">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="icon" href="images/favicon-logo.png">
+    <meta property="og:title" content="Nicolas Velasquez - WDD 230 - Web Frontend Development" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="Demonstrate knowledge by applying HTML and CSS in the design and development of a website from course assignment portal">
+    <meta property="og:url" content="https://www.nicoveldev.com/" />
+    <meta property="og:image" content="https://www.spatial.io/_next/image?url=https%3A%2F%2Fmodels.readyplayer.me%2F63f63e739233b3995d6da501.png%3Fscene%3Dfullbody-portrait-closeupfront&w=640&q=75" />
+    <script src="scripts/getDates.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/profile.png" alt="headshot">
+            <span>Nicolas Velasquez</span>
+            <button id="menu-toggle" class="hamburger" aria-label="Toggle menu">☰</button>
+            <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Toggle dark mode">🌙</button>
+        </div>
+        <nav id="menu-items" class="menu">
+            <a href="/index.html">Home</a>
+            <a href="/wdd230/chamber/index.html">Chamber</a>
+            <a href="/wdd230/week01/chamber-site-plan.html">Site Plan</a>
+            <a href="">Form</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Sign Up Form</h1>
+        <form id="signup-form" action="record.html" method="get">
+            <!-- Username -->
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+    
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required pattern="[A-Za-z0-9]{8,}" title="Password must be at least 8 characters and alphanumeric.">
+            </div>
+    
+            <!-- Confirm Password -->
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+    
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Please enter a valid byui.edu email address.">
+            </div>
+    
+            <!-- Page Rating -->
+            <div class="form-group">
+                <label for="rating">Page Rating (1 to 10): <span id="rating-value">5</span></label>
+                <input type="range" id="rating" name="rating" min="1" max="10" step="1" value="5" oninput="document.getElementById('rating-value').textContent = this.value">
+            </div>
+    
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    
+    <footer>
+        <p>©<span id="currentYear"></span>🌎 Nicolas Velasquez 🌎 Colombia</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

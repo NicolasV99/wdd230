@@ -52,3 +52,19 @@ function updatePageVisitCounter() {
 
 // Call the function to update the counter on page load
 updatePageVisitCounter();
+
+
+
+// Form Code
+document.getElementById('signup-form').addEventListener('submit', function (e) {
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
+    
+    if (password !== confirmPassword) {
+        e.preventDefault();
+        alert("Passwords do not match. Please try again.");
+        document.getElementById('password').value = '';
+        document.getElementById('confirm-password').value = '';
+        document.getElementById('password').focus();
+    }
+});

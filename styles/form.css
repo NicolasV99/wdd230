@@ -1,0 +1,347 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --primary-color: #333;
+    --secondary-color: #f4f4f4;
+    --font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3{
+    font-family: 'Montserrant', sans-serif;
+}
+
+body, html {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.header-content span{
+    font-size: 30px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.header-content img {
+    width: 100px;
+    height: auto;
+    border-radius: 5%;
+}
+
+/* Dark mode styles for mobile */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode main {
+    background-color: #1f1f1f;
+}
+
+.dark-mode header, .dark-mode footer {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .card {
+    background-color: #2a2a2a;
+}
+
+.dark-mode .card h2 {
+    background-color: #444;
+}
+
+.dark-mode .menu a {
+    color: #000;
+    background-color: #fff;
+}
+
+.dark-mode .menu a:hover {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.dark-mode .card-container .learn-list a{
+    color: #fff;
+}
+
+/*END*/
+
+/* Styles for hamburguer menu in Mobile */
+.hamburger {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: block;
+}
+
+/* Cambiar el icono a "X" cuando el menú esté abierto */
+.hamburger.open {
+    content: "✖"; /* Mostrar "X" cuando esté abierto */
+}
+
+/* Estilos del menú oculto */
+.menu {
+    display: none;
+    flex-direction: column;
+    background-color: #000;
+}
+
+.menu.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*END*/
+
+
+nav {
+    background-color: #000;
+}
+nav a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    background-color: #fff;
+    color: #333;
+}
+
+/*FORM CODE*/
+
+main {
+    padding: 20px;
+}
+
+main h1{
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 0px;
+    color: var(--primary-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color:var(--secondary-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="range"],
+button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+button {
+    background-color: transparent;
+    color: var(--primary-color);
+    cursor: pointer;
+    border: 1px solid var(--primary-color);
+    font-size: 1.2rem;
+    padding: 15px;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+#rating-value {
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+
+
+/*END FORM CODE*/
+
+footer {
+    text-align: center;
+    padding: 20px 10px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+    /* For larger screens */
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Hacemos que el body ocupe toda la altura de la pantalla */
+    }
+    
+    .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-content {
+        padding: 1rem;
+    }
+
+    .header-content h1{
+        padding: 1rem;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    nav a {
+        display: inline-block;
+        width: 100%;
+        margin: 0px;
+    }
+
+    nav a:hover{
+        background-color: #fff;
+        color: #333;
+    }
+
+    /* Hide the hamburger button in desktop*/
+    .hamburger {
+        display: none;
+    }
+
+    
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: #000;
+    }
+
+    .menu a {
+        padding: 10px 20px; 
+        text-align: center;
+    }
+
+
+    /* Dark mode styles for desktop */
+    body.dark-mode {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+
+    .dark-mode main {
+        background-color: #1f1f1f;
+    }
+
+    .dark-mode header, .dark-mode footer {
+        background-color: #333;
+        color: #fff;
+    }
+
+    .dark-mode .card {
+        background-color: #2a2a2a;
+    }
+
+    .dark-mode .card h2 {
+        background-color: #444;
+    }
+
+    .dark-mode .menu a {
+        color: #fff;
+        background-color: #444;
+    }
+
+    .dark-mode .menu a:hover {
+        background-color: #fff;
+        color: #000;
+    }
+
+    /*END*/
+
+    /*START FORM CODE*/
+
+    main h1 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        padding: 40px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    button {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 1.5rem;
+    }
+
+    /*END FORM CODE*/
+
+
+    main {
+        flex: 1; /* Esto hace que el main ocupe todo el espacio disponible */
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px 10px;
+        background-color: #333;
+        color: white;
+        width: 100%;
+        height: auto;
+        position: relative; /* Cambiamos position a relative */
+    }
+}
