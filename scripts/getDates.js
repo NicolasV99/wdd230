@@ -68,3 +68,11 @@ document.getElementById('signup-form').addEventListener('submit', function (e) {
         document.getElementById('password').focus();
     }
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const timestampField = document.getElementById('timestamp');
+    const currentTimestamp = new Date().toISOString();
+    timestampField.value = currentTimestamp;
+});

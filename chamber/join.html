@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discover - Conecta Calima</title>
+    <title>Join - Conecta Calima</title>
     <meta name="description" content="Discover Conecta Calima, a site to serve as a comprehensive resource for local entrepreneurs, promoting economic growth and community development. ">
     <meta name="author" content="Nicolas Velasquez">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="icon" href="images/favicon.png">
     <script src="scripts/chamber.js" defer></script>
-    <meta property="og:title" content="Discover - Conecta Calima" />
+    <meta property="og:title" content="Join - Conecta Calima" />
     <meta property="og:type" content="website"/>
     <meta property="og:description" content="Discover Conecta Calima, a site to serve as a comprehensive resource for local entrepreneurs, promoting economic growth and community development.">
     <meta property="og:url" content="https://www.conectacalima.com/discover" />
@@ -41,75 +41,76 @@
             </div>
         </nav>
     </header>
-    
-
-    <!-- Main Content -->
     <main>
         <!-- Hero Section (Opening) -->
         <section class="hero-discover">
             <picture>
                 <source srcset="images/discover-hero-image.webp" media="(max-width: 960px)">
-                <img src="images/discover-hero-image.webp" alt="Calima Darien Landscape" class="hero-img" loading="lazy">
+                <img src="images/join-hero-image.webp" alt="Calima Darien Landscape" class="hero-img" loading="lazy">
             </picture>
             <div class="hero-content">
-                <h1>Discover</h1>
+                <h1>Join</h1>
             </div>
         </section>
-        <div class="grid-container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div id="visit-message"></div>
-                <h2>Discover Calima</h2>
-                <p>Calima is known for its stunning landscapes and rich cultural heritage.</p>
-                <h3>Demographics</h3>
+        <!-- Join Form Section -->
+        <section class="form-section">
+            <form action="thankyou.html" method="get">
+                <!-- Applicant's First Name -->
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="firstName" required>
+                
+                <!-- Applicant's Last Name -->
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="lastName" required>
+                
+                <!-- Applicant's Title -->
+                <label for="title">Title/Position:</label>
+                <input type="text" id="title" name="title" pattern="[A-Za-z\s-]{7,}" title="Please enter at least 7 alphabetic characters or hyphens" required>
+
+                <!-- Applicant's Email -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+
+                <!-- Applicant's Mobile Phone -->
+                <label for="phone">Mobile Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <!-- Business/Organization Name -->
+                <label for="organization-name">Business/Organization Name:</label>
+                <input type="text" id="organization-name" name="organizationName" required>
+
+                <!-- Membership Level Selection -->
+                <label for="membership-level">Membership Level:</label>
+                <select id="membership-level" name="membershipLevel" required>
+                    <option value="np">NP Membership (Non-profit, no fee)</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
+
+                <!-- Organization Description -->
+                <label for="description">Business/Organization Description:</label>
+                <textarea id="description" name="description" rows="4"></textarea>
+
+                <!-- Timestamp (Hidden Field) -->
+                <input type="hidden" id="timestamp" name="timestamp" value="">
+
+                <!-- Submit Button -->
+                <input type="submit" value="Submit">
+            </form>
+
+            <!-- Membership Benefits (Displayed for larger screens) -->
+            <aside class="membership-benefits">
+                <h2>Membership Levels & Benefits</h2>
                 <ul>
-                    <li>Population: Approximately 15,000</li>
-                    <li>Language: Spanish</li>
-                    <li>Area: 345 km²</li>
+                    <li><strong>NP Membership:</strong> Access to community resources and no membership fee.</li>
+                    <li><strong>Bronze Membership:</strong> Event discounts and networking opportunities.</li>
+                    <li><strong>Silver Membership:</strong> Training programs and advertising opportunities.</li>
+                    <li><strong>Gold Membership:</strong> Featured spotlights on homepage and premium event access.</li>
                 </ul>
-                <h3>Attractions</h3>
-                <ul>
-                    <li>Lake Calima</li>
-                    <li>Calima Gold Museum</li>
-                    <li>Water Sports Activities</li>
-                </ul>
-                <h3>Events</h3>
-                <p>Annual Calima Festival: Celebrating local culture and traditions.</p>
             </aside>
-    
-            <!-- Main Area -->
-            <section class="gallery">
-                <h2>Local Photos of Interest</h2>
-                <div class="image-grid">
-                    <figure>
-                        <img src="images//lake-calima.webp" loading="lazy" alt="Lake Calima" />
-                        <figcaption>Lake Calima at sunset.</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/calima-gold-museum.webp" loading="lazy" alt="Calima Gold Museum" />
-                        <figcaption>Calima Gold Museum exhibits.</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images//water-sports.webp" loading="lazy" alt="Water Sports" />
-                        <figcaption>Water sports at Lake Calima.</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/cultural-festival.webp" loading="lazy" alt="Cultural Festival" />
-                        <figcaption>Cultural festival in Calima.</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/scenic-view.webp" loading="lazy" alt="Scenic View" />
-                        <figcaption>Scenic view of Calima.</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/cuisine-calima.webp" loading="lazy" alt="Local Cuisine" />
-                        <figcaption>Delicious local cuisine.</figcaption>
-                    </figure>
-                </div>
-            </section>
-        </div>
+        </section>
     </main>
-    
 
     <!-- Footer -->
     <footer>

@@ -464,11 +464,135 @@ figcaption {
     font-size: 1rem;
     text-transform: capitalize;
 }
-
-
-
-
 /*END DISCOVER PAGE CODE*/
+
+
+/*START JOIN PAGE CODE*/
+
+/* Mobile-first styles */
+.form-section {
+    display: block;
+    padding: 20px;
+    background-color: #F3F3F3;
+    margin: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.form-section label {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-section input,
+.form-section select,
+.form-section textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #002349;
+    border-radius: 5px;
+}
+
+select{
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    color: #000;
+    background-color: #f3f3f3;
+    border: 1px solid #002349;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="5"><path fill="%23002349" d="M0 0l5 5 5-5H0z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px 5px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+
+.form-section input[type="submit"] {
+    background-color: transparent;
+    color: #002349;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: 1px solid #002349;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+
+.form-section input[type="submit"]:hover {
+    background-color: #002349;
+    color: #fff;
+}
+
+.membership-benefits {
+    display: none;
+}
+
+
+/*END JOIN PAGE CODE*/
+
+/*START THANKYOU CODE*/
+
+.thankyou-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    text-align: center;
+    padding: 20px;
+    background-color: #f3f3f3;
+}
+
+.thankyou-section h1 {
+    font-size: 1.8rem;
+    color: #002349;
+    margin-bottom: 1rem;
+}
+
+.thankyou-section p {
+    font-size: 1rem;
+    color: #000;
+    margin-bottom: 2rem;
+}
+
+.thankyou-section .btn {
+    display: inline-block;
+    background-color: transparent;
+    color: #002349;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: 1px solid #002349;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.thankyou-section .btn:hover {
+    background-color: #002349;
+    color: #fff;
+}
+
+
+/*END THANKYOU CODE*/
 
 
 /*START FOOTER CODE*/
