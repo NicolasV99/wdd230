@@ -540,8 +540,42 @@ select{
     color: #fff;
 }
 
+/* Base mobile styles */
+
 .membership-benefits {
-    display: none;
+    display: block; /* Make sure it's visible in mobile */
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f3f3f3; /* Adjust background to match theme */
+}
+
+.membership-benefits h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.membership-benefits ul {
+    list-style: none;
+    padding: 0;
+}
+
+.membership-benefits ul li {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.membership-benefits ul li strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Style for mobile dropdown for membership selection */
+.membership-select {
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 

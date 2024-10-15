@@ -272,6 +272,9 @@ nav {
 
 .membership-benefits ul li{
     padding-bottom: 1rem;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
 }
 
 /*END JOIN PAGE CODE*/
