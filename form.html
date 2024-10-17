@@ -37,31 +37,31 @@
     </header>
     <main>
         <h1>Sign Up Form</h1>
-        <form id="signup-form" action="record.html" method="get">
-            <!-- Username -->
+            <form id="signup-form" action="record.html" method="get">
+                <!-- Username -->
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
             </div>
-    
+
             <!-- Password -->
             <div class="form-group">
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required pattern="[A-Za-z0-9]{8,}" title="Password must be at least 8 characters and alphanumeric.">
             </div>
-    
+
             <!-- Confirm Password -->
             <div class="form-group">
                 <label for="confirm-password">Confirm Password:</label>
                 <input type="password" id="confirm-password" name="confirm-password" required>
             </div>
-    
+
             <!-- Email -->
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Please enter a valid byui.edu email address.">
             </div>
-    
+
             <!-- Page Rating -->
             <div class="form-group">
                 <label for="rating">Page Rating (1 to 10): <span id="rating-value">5</span></label>

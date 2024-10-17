@@ -56,17 +56,17 @@ updatePageVisitCounter();
 
 
 // Form Code
-document.getElementById('signup-form').addEventListener('submit', function (e) {
+document.getElementById('signup-form').addEventListener('submit', function(event) {
+    // Password Match Validation
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirm-password').value;
-    
+
     if (password !== confirmPassword) {
-        e.preventDefault();
-        alert("Passwords do not match. Please try again.");
-        document.getElementById('password').value = '';
-        document.getElementById('confirm-password').value = '';
-        document.getElementById('password').focus();
+        alert("Passwords do not match. Please re-enter.");
+        event.preventDefault(); // Prevent form submission
     }
+
+    // Email validation is handled by the pattern attribute in the HTML
 });
 
 
