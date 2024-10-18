@@ -199,6 +199,14 @@ main h1{
     padding: 1rem;
 }
 
+#learn-list a{
+    color: #000;
+}
+
+#learn-list a:hover{
+    color: #333;
+}
+
 .info-list {
     display: flex;
     flex-direction: column; /* Para que cada elemento (clima y visitas) aparezcan en su propia línea */
