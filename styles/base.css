@@ -199,13 +199,22 @@ main h1{
     padding: 1rem;
 }
 
-.card .info-list{
-    text-align: center;
-    padding: 1rem;
+.info-list {
+    display: flex;
+    flex-direction: column; /* Para que cada elemento (clima y visitas) aparezcan en su propia línea */
 }
 
-.info-list li{
-    padding: 10px;
+.info-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Asegura que los elementos se distribuyan correctamente en una línea */
+    margin-bottom: 10px; /* Espaciado entre el clima y el contador de visitas */
+    text-transform: capitalize;
+}
+
+#weather-info img {
+    margin-left: 10px; /* Espaciado entre el texto del clima y el icono */
+    filter: invert(1);
 }
 
 .map-container {

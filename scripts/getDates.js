@@ -54,25 +54,27 @@ function updatePageVisitCounter() {
 updatePageVisitCounter();
 
 
-
-// Form Code
-document.getElementById('signup-form').addEventListener('submit', function(event) {
-    // Password Match Validation
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirm-password').value;
-
-    if (password !== confirmPassword) {
-        alert("Passwords do not match. Please re-enter.");
-        event.preventDefault(); // Prevent form submission
-    }
-
-    // Email validation is handled by the pattern attribute in the HTML
-});
-
-
-
 document.addEventListener("DOMContentLoaded", function() {
     const timestampField = document.getElementById('timestamp');
     const currentTimestamp = new Date().toISOString();
     timestampField.value = currentTimestamp;
 });
+
+
+const apiKey = '815fbb06782bb6c9f36fd4a8ca6dc311';
+const lat = 3.45;
+const lon = -76.53;
+const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+fetch(weatherUrl)
+  .then(response => response.json())
+  .then(data => {
+    const temperature = data.main.temp;
+    const description = data.weather[0].description;
+    const iconCode = data.weather[0].icon;
+    const iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`;
+
+    const weatherInfo = document.getElementById('weather-info');
+    weatherInfo.innerHTML = `🌡️ ${temperature.toFixed(2)}°C - ${description} <img src="${iconUrl}" alt="${description}">`;
+  })
+  .catch(error => console.error('Error fetching weather data:', error));
