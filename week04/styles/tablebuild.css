@@ -1,0 +1,65 @@
+/* Basic styles for the table */
+table {
+    width: 60%;
+    margin: 50px auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+/* Caption styling */
+caption {
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Header styling */
+thead th{
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+}
+
+
+/* Body styling with zebra striping */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+/* Cell styling */
+td, th {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 8px;
+    font-size: 1rem;
+}
+
+
+/* Customize the emoticons */
+td {
+    font-size: 1.5rem;
+}
+
+/* Basic Responsive Design */
+@media (max-width: 768px) {
+    table {
+        width: 90%;
+    }
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 20px 10px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
