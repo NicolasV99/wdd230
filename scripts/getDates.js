@@ -54,11 +54,11 @@ function updatePageVisitCounter() {
 updatePageVisitCounter();
 
 
-document.addEventListener("DOMContentLoaded", function() {
+/*document.addEventListener("DOMContentLoaded", function() {
     const timestampField = document.getElementById('timestamp');
     const currentTimestamp = new Date().toISOString();
     timestampField.value = currentTimestamp;
-});
+});*/
 
 
 const apiKey = '815fbb06782bb6c9f36fd4a8ca6dc311';

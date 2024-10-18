@@ -1,0 +1,53 @@
+{
+    "weeks": [
+        {
+            "week": "Week 1",
+            "links": [
+                {
+                    "url": "week01/holygrail.html",
+                    "title": "Grail"
+                },
+                {
+                    "url": "week01/media-query-html",
+                    "title": "Media Query"
+                }
+            ]
+        },
+        {
+            "week": "Week 2",
+            "links": [
+                {
+                    "url": "week02/design.html",
+                    "title": "Design"
+                }
+            ]
+        },
+        {
+            "week": "Week 3",
+            "links": [
+                {
+                    "url": "week03/lazyload.html",
+                    "title": "Lazy"
+                }
+            ]
+        },
+        {
+            "week": "Week 4",
+            "links": [
+                {
+                    "url": "week04/tablebuild.html",
+                    "title": "Table"
+                }
+            ]
+        },
+        {
+            "week": "Week 5",
+            "links": [
+                {
+                    "url": "week05/prophets.html",
+                    "title": "Prophets"
+                }
+            ]
+        }
+    ]
+}
