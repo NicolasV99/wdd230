@@ -581,6 +581,26 @@ select{
 
 /*END JOIN PAGE CODE*/
 
+
+/*START DIRECTORY CODE*/
+.directory-grid .member-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    margin: 1rem;
+}
+
+.directory-list .member-card {
+    display: block;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    margin: 1rem;
+}
+/*END DIRECTORY PAGE CODE*/
+
+
+
 /*START THANKYOU CODE*/
 
 .thankyou-section {

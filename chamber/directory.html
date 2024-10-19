@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Directory - Conecta Calima</title>
+        <meta name="description" content="Discover Conecta Calima, a site to serve as a comprehensive resource for local entrepreneurs, promoting economic growth and community development. ">
+        <meta name="author" content="Nicolas Velasquez">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/larger.css">
+        <link rel="icon" href="images/favicon.png">
+        <script src="scripts/chamber.js" defer></script>
+        <meta property="og:title" content="Directory - Conecta Calima" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:description" content="Discover Conecta Calima, a site to serve as a comprehensive resource for local entrepreneurs, promoting economic growth and community development.">
+        <meta property="og:url" content="https://www.conectacalima.com/discover" />
+        <meta property="og:image" content="https://revistasoyviajero.com/wp-content/uploads/2024/07/Atractivos-Turisticos-del-Lago-Calima-800x533.jpg" />
+    </head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="images/conecta-calima-logo-white.png" alt="Conecta Calima Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="#" class="btn-connect">Let's Connect</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section (Opening) -->
+        <section class="hero-discover">
+            <picture>
+                <source srcset="images/directory.webp" media="(max-width: 960px)">
+                <img src="images/directory.webp" alt="Calima Darien Landscape" class="hero-img" loading="lazy">
+            </picture>
+            <div class="hero-content">
+                <h1>Directory</h1>
+            </div>
+        </section>
+        <h1>Member Directory</h1>
+        <div class="view-toggle">
+            <button id="grid-view">Grid View</button>
+            <button id="list-view">List View</button>
+        </div>
+        <section id="directory-container" class="directory-grid">
+            <!-- Member cards will be dynamically inserted here -->
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="top-section">
+            <div class="left-section">
+                <div class="footer-logo">
+                    <img src="images/conecta-calima-logo-white.png" alt="Conecta Calima Logo">
+                </div>
+                <p>© 2024 Conecta Calima. All rights reserved.</p>
+                <p class="disclaimer"><a href="#">Contact Us</a> | <a href="#">Disclaimer</a></p>
+            </div>
+        </div>
+        <hr> <!-- Line to divide sections -->
+        <div class="bottom-section">
+            <p>©<span id="currentYear"></span> Conecta Calima | <b>Nicolas Velasquez</b> | WDD 230 Project</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>
