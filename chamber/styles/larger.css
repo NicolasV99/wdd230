@@ -280,14 +280,50 @@ nav {
 /*END JOIN PAGE CODE*/
 
 /*START DIRECTORY CODE*/
+.member-directory{
+    text-align: center;   
+}
+
+.member-directory h2{
+    font-size: 2rem;
+}
 
 .directory-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    
+}
+
+.directory-grid .member-card{
+    transition: transform 0.3s ease;
+}
+
+.directory-grid .member-card:hover{
+    transform: translateY(-5px); 
+}
+
+.directory-grid h3{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .directory-list {
     display: block;
+    transition: transform 0.3s ease;
+}
+
+.directory-list .member-card{
+    transition: transform 0.3s ease;
+}
+
+.directory-list .member-card:hover{
+    transform: translateY(-5px); 
+}
+
+.directory-list h3{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 /*END DIRECTORY PAGE CODE*/

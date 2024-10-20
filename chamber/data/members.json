@@ -1,20 +1,60 @@
 {
     "members": [
         {
-            "name": "Company A",
-            "address": "123 Main St, City, State",
-            "phone": "555-1234",
-            "website": "https://company-a.com",
-            "image": "company-a.jpg",
+            "name": "Café Calima",
+            "address": "Carrera 12 #34-56, Calima, Valle",
+            "phone": "555-9876",
+            "website": "https://cafecalima.com",
+            "image": "logo-1.svg",
             "membershipLevel": "Gold"
         },
         {
-            "name": "Company B",
-            "address": "456 Elm St, City, State",
-            "phone": "555-5678",
-            "website": "https://company-b.com",
-            "image": "company-b.jpg",
+            "name": "Hotel Lago Azul",
+            "address": "Calle 5 #67-89, Calima, Valle",
+            "phone": "555-1234",
+            "website": "https://lagohotel.com",
+            "image": "logo-2.svg",
             "membershipLevel": "Silver"
+        },
+        {
+            "name": "Agencia Viajes Valle",
+            "address": "Avenida Las Palmas #45-78, Calima, Valle",
+            "phone": "555-5678",
+            "website": "https://viajesvalle.com",
+            "image": "logo-3.svg",
+            "membershipLevel": "Bronze"
+        },
+        {
+            "name": "Restaurante El Sazón",
+            "address": "Calle 10 #23-45, Calima, Valle",
+            "phone": "555-4321",
+            "website": "https://elsazon.com",
+            "image": "logo-4.svg",
+            "membershipLevel": "Gold"
+        },
+        {
+            "name": "Bicicletas Calima",
+            "address": "Carrera 8 #12-34, Calima, Valle",
+            "phone": "555-8765",
+            "website": "https://bikescalima.com",
+            "image": "logo-5.svg",
+            "membershipLevel": "Silver"
+        },
+        {
+            "name": "Tienda Artesanal",
+            "address": "Carrera 7 #56-78, Calima, Valle",
+            "phone": "555-3456",
+            "website": "https://artescalima.com",
+            "image": "logo-6.svg",
+            "membershipLevel": "Bronze"
+        },
+        {
+            "name": "EcoTours Calima",
+            "address": "Avenida Principal #12-34, Calima, Valle",
+            "phone": "555-7890",
+            "website": "https://ecotourscalima.com",
+            "image": "logo-7.svg",
+            "membershipLevel": "Gold"
         }
     ]
 }

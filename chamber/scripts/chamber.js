@@ -19,7 +19,7 @@ burger.addEventListener('click', () => {
     burger.classList.toggle('toggle'); // Toggle the X animation
 });
 
-
+/*
 // Get the visit message element
 const visitMessage = document.getElementById('visit-message');
 
@@ -48,6 +48,7 @@ if (!lastVisitDate) {
 
 // Store the current visit date
 localStorage.setItem('lastVisitDate', currentDate);
+*/
 
 
 // directory code
@@ -72,7 +73,7 @@ function displayMembers(members) {
 
         memberCard.innerHTML = `
             <img src="images/${member.image}" alt="${member.name}">
-            <h2>${member.name}</h2>
+            <h3>${member.name}</h3>
             <p>Address: ${member.address}</p>
             <p>Phone: ${member.phone}</p>
             <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>

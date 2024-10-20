@@ -583,19 +583,151 @@ select{
 
 
 /*START DIRECTORY CODE*/
+
+.member-directory{
+    padding: 1rem;
+    text-align: center;  
+}
+
+
+.member-directory h2{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.view-toggle #grid-view, #list-view{
+    background-color: transparent;
+    color: #002349;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: 1px solid #002349;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 400;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.view-toggle #grid-view:hover, #list-view:hover {
+    background-color: #002349;
+    color: #fff;
+}
+
+.directory-grid{
+    padding: 1rem 0;
+}
+
 .directory-grid .member-card {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    border: 1px solid #ccc;
+    background-color: #f3f3f3;
+    padding: 1.5rem;
+    border: 1px solid #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin: 1rem;
+    align-items: center;
+}
+
+.directory-grid .member-card p{
+    font-size: 1rem;
+}
+
+.directory-grid .member-card img{
+    width: 100px;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.directory-grid .member-card a{
+    position: relative;
+    color: #000;
+    text-decoration: none;
+}
+
+.directory-grid .member-card a:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: grey!important;
+    transition: .3s linear;
+}
+
+.directory-grid .member-card a:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background: #002349!important;
+    transition: .3s linear;
+}
+
+.directory-grid .member-card a:hover::after{
+    width: 100%;
+}
+
+.directory-grid .member-card a:hover{
+    color: #002349;
+}
+
+.directory-list{
+    padding: 1rem 0;
 }
 
 .directory-list .member-card {
     display: block;
-    padding: 1rem;
-    border: 1px solid #ccc;
+    background-color: #f3f3f3;
+    padding: 1.5rem;
+    border: 1px solid #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin: 1rem;
+}
+
+.directory-list .member-card img{
+    display: none;
+}
+
+.directory-list .member-card a{
+    position: relative;
+    color: #000;
+    text-decoration: none;
+}
+
+.directory-list .member-card a:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: grey!important;
+    transition: .3s linear;
+}
+
+.directory-list .member-card a:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background: #002349!important;
+    transition: .3s linear;
+}
+
+.directory-list .member-card a:hover::after{
+    width: 100%;
+}
+
+.directory-list .member-card a:hover{
+    color: #002349;
 }
 /*END DIRECTORY PAGE CODE*/
 
