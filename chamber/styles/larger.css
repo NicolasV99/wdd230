@@ -295,6 +295,12 @@ nav {
     
 }
 
+.directory-grid .member-card img{
+    width: 100px;
+    height: 100px;
+    padding-bottom: 10px;
+}
+
 .directory-grid .member-card{
     transition: transform 0.3s ease;
 }
