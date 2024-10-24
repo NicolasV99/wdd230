@@ -83,7 +83,7 @@ function displayMembers(members) {
     });
 }
 
-// Asegúrate de que los botones existen antes de añadir los eventos
+// Make sure the buttons exist before adding the events
 if (gridViewBtn && listViewBtn) {
     gridViewBtn.addEventListener('click', () => {
         directoryContainer.classList.add('directory-grid');
@@ -96,7 +96,7 @@ if (gridViewBtn && listViewBtn) {
     });
 }
 
-// Llamada a la función para obtener y mostrar los miembros
+// Call funtion to show
 getMembers();
 
 //Weather JS code
@@ -146,3 +146,50 @@ async function fetchWeatherData() {
 
 fetchWeatherData();
 
+//Member Spotligths JS code
+// Fetch members from JSON
+async function getMembersForSpotlight() {
+    const response = await fetch('data/members.json');
+    const data = await response.json();
+    displaySpotlightMembers(data.members);
+}
+
+// Filter and randomly select 2-3 'silver' or 'gold' members
+function displaySpotlightMembers(members) {
+    // Filtrar miembros con niveles de membresía "Gold" o "Silver"
+    const qualifiedMembers = members.filter(member => member.membershipLevel === 'Gold' || member.membershipLevel === 'Silver');
+    
+    // Mezclar los miembros calificados
+    shuffleArray(qualifiedMembers);
+    
+    // Seleccionar aleatoriamente 2 o 3 miembros
+    const selectedMembers = qualifiedMembers.slice(0, 3);
+    
+    // Mostrar los miembros seleccionados en el contenedor de spotlights
+    const spotlightContainer = document.querySelector('.spotlight-cards');
+    spotlightContainer.innerHTML = ''; // Limpiar contenido previo
+
+    selectedMembers.forEach(member => {
+        const memberCard = document.createElement('div');
+        memberCard.classList.add('spotlight-card');
+        memberCard.innerHTML = `
+            <img src="images/${member.image}" alt="${member.name} logo">
+            <h3>${member.name}</h3>
+            <p>${member.address}</p>
+            <p><a href="tel:${member.phone}">${member.phone}</a></p>
+            <p><a href="${member.website}" target="_blank">Website</a></p>
+        `;
+        spotlightContainer.appendChild(memberCard);
+    });
+}
+
+// Función para mezclar el array de miembros (Fisher-Yates shuffle)
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+// Ejecutar al cargar la página
+getMembersForSpotlight();
