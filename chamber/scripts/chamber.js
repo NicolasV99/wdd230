@@ -97,3 +97,50 @@ listViewBtn.addEventListener('click', () => {
 
 // Load members when page loads
 getMembers();
+
+const apiKey = '815fbb06782bb6c9f36fd4a8ca6dc311';
+const lat = 3.45;
+const lon = -76.53;
+const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+async function fetchWeatherData() {
+    try {
+        // Obtener clima actual
+        const response = await fetch(weatherUrl);
+        const data = await response.json();
+
+        // Mostrar clima actual
+        const temp = data.main.temp.toFixed(1);
+        const description = data.weather[0].description;
+        document.querySelector('.weather-content').innerHTML = `
+            <p>🌡️ <b>${temp}°C</b> - ${description}</p>
+        `;
+
+        // Obtener pronóstico de 3 días
+        const forecastResponse = await fetch(forecastUrl);
+        const forecastData = await forecastResponse.json();
+
+        // Filtrar pronóstico de 3 días (cada 24 horas)
+        const forecastList = forecastData.list.filter(item => item.dt_txt.includes('12:00:00')).slice(0, 3);
+
+        let forecastHTML = '<h3>3-Day Forecast</h3>';
+        forecastList.forEach(day => {
+            const date = new Date(day.dt_txt).toLocaleDateString('en-GB', { weekday: 'long', month: 'short', day: 'numeric' });
+            const dayTemp = day.main.temp.toFixed(1);
+            const dayDescription = day.weather[0].description;
+            forecastHTML += `
+                <p><b>${date}:</b> ${dayTemp}°C - ${dayDescription}</p>
+            `;
+        });
+
+        document.querySelector('.weather-content').innerHTML += forecastHTML;
+
+    } catch (error) {
+        console.error('Error fetching weather data:', error);
+        document.querySelector('.weather-content').innerHTML = '<p>Error loading weather data.</p>';
+    }
+}
+
+fetchWeatherData();
+
