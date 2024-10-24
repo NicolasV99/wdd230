@@ -52,7 +52,6 @@ localStorage.setItem('lastVisitDate', currentDate);
 
 
 // directory code
-
 const directoryContainer = document.getElementById('directory-container');
 const gridViewBtn = document.getElementById('grid-view');
 const listViewBtn = document.getElementById('list-view');
@@ -84,20 +83,23 @@ function displayMembers(members) {
     });
 }
 
-// Toggle views
-gridViewBtn.addEventListener('click', () => {
-    directoryContainer.classList.add('directory-grid');
-    directoryContainer.classList.remove('directory-list');
-});
+// Asegúrate de que los botones existen antes de añadir los eventos
+if (gridViewBtn && listViewBtn) {
+    gridViewBtn.addEventListener('click', () => {
+        directoryContainer.classList.add('directory-grid');
+        directoryContainer.classList.remove('directory-list');
+    });
 
-listViewBtn.addEventListener('click', () => {
-    directoryContainer.classList.add('directory-list');
-    directoryContainer.classList.remove('directory-grid');
-});
+    listViewBtn.addEventListener('click', () => {
+        directoryContainer.classList.add('directory-list');
+        directoryContainer.classList.remove('directory-grid');
+    });
+}
 
-// Load members when page loads
+// Llamada a la función para obtener y mostrar los miembros
 getMembers();
 
+//Weather JS code
 const apiKey = '815fbb06782bb6c9f36fd4a8ca6dc311';
 const lat = 3.45;
 const lon = -76.53;
@@ -114,7 +116,7 @@ async function fetchWeatherData() {
         const temp = data.main.temp.toFixed(1);
         const description = data.weather[0].description;
         document.querySelector('.weather-content').innerHTML = `
-            <p>🌡️ <b>${temp}°C</b> - ${description}</p>
+            <p>🌡️ <b>${temp}°C</b> -☁️ ${description}</p>
         `;
 
         // Obtener pronóstico de 3 días

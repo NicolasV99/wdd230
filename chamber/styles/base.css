@@ -262,15 +262,12 @@ nav .logo img {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.weather-info p {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    font-family: 'Inter', sans-serif;
-    color: #333;
+.weather-content h3{
+    padding: 1rem 0;
 }
 
-.weather-info p::before {
-    margin-right: 0.5rem;
+.weather-content p{
+    text-transform: capitalize;
 }
 
 /*END WEATHER CODE*/
