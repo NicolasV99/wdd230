@@ -203,11 +203,11 @@ nav {
 /*BANNER CODE*/
 .banner:hover{
     transform: scale(0.98); 
-        transition: transform 0.3s ease; 
+    transition: transform 0.3s ease; 
 }
 
 
-/*END ABNNER CODE*/
+/*END BANNER CODE*/
 
 /*START DISCOVER PAGE CODE*/
 

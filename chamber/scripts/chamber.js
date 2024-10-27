@@ -22,7 +22,6 @@ burger.addEventListener('click', () => {
 
 
 //Banner JS code
-
 const banner = document.createElement('div');
 banner.id = 'meet-greet-banner';
 banner.innerHTML = `
@@ -43,7 +42,6 @@ if (currentDay === 1 || currentDay === 2 || currentDay === 3) {
 }
 
 //Discover JS code
-
 // Discover Page Visit Message Code
 const visitMessage = document.getElementById('visit-message');
 
