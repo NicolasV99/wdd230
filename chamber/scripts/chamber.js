@@ -16,42 +16,31 @@ const nav = document.querySelector('.nav-links');
 
 burger.addEventListener('click', () => {
     nav.classList.toggle('nav-active');
-    burger.classList.toggle('toggle'); // Toggle the X animation
+    burger.classList.toggle('toggle'); 
 });
 
 
-// Banner JS Code
-// Get the banner and close button elements
-const banner = document.getElementById('meet-greet-banner');
-const closeBannerButton = document.getElementById('close-banner');
 
-// Function to check if today is Monday, Tuesday, or Wednesday
-function shouldShowBanner() {
-    const today = new Date().getDay(); // 0 is Sunday, 1 is Monday, etc.
-    return today === 1 || today === 2 || today === 3; // Mon, Tue, Wed
-}
+//Banner JS code
 
-// Function to show the banner
-function displayBanner() {
-    const lastClosedDate = localStorage.getItem('bannerClosedDate');
-    const todayDate = new Date().toDateString();
+const banner = document.createElement('div');
+banner.id = 'meet-greet-banner';
+banner.innerHTML = `
+    <p>Join us for the Chamber of Commerce meet and greet on Wednesday at 7:00 p.m. <span id="close-banner" style="cursor: pointer; margin-left: 10px;">❌</span></p>
+`;
 
-    // Show the banner if it's the correct day and it hasn't been closed today
-    if (shouldShowBanner() && lastClosedDate !== todayDate) {
-        banner.classList.remove('hidden');
+const currentDay = new Date().getDay();
+
+if (currentDay === 1 || currentDay === 2 || currentDay === 3) {
+    document.body.prepend(banner);
+
+    const closeButton = document.getElementById('close-banner');
+    if (closeButton) {
+        closeButton.addEventListener('click', () => {
+            banner.style.display = 'none';
+        });
     }
 }
-
-// Event listener to close the banner
-closeBannerButton.addEventListener('click', () => {
-    banner.classList.add('hidden'); // Hide the banner
-    const todayDate = new Date().toDateString();
-    localStorage.setItem('bannerClosedDate', todayDate); // Store the close date
-});
-
-// Call displayBanner on page load
-displayBanner();
-
 
 //Discover JS code
 
