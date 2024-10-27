@@ -173,7 +173,7 @@ nav .logo img {
 /*END HERO CODE*/
 
 
-/*START EVETNS CODE*/
+/*START EVENTS CODE*/
 
 .current-events {
     padding: 2rem 1rem;
@@ -382,6 +382,38 @@ nav .logo img {
     transform: scale(1.1);
 }
 /*END CTA SECTION CODE*/
+
+/*BANNER CODE*/
+
+/* Basic styling for the banner */
+.banner {
+    background-color: #f3f3f3; /* Example color */
+    color: #000; /* Text color */
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Hide the banner by default */
+.hidden {
+    display: none;
+}
+
+.banner button {
+    background: transparent;
+    border: none;
+    color: #002349;
+    font-weight: bold;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+
+/*END BANNER CODE*/
 
 
 /*START DISCOVER PAGE CODE*/

@@ -19,85 +19,117 @@ burger.addEventListener('click', () => {
     burger.classList.toggle('toggle'); // Toggle the X animation
 });
 
-/*
-// Get the visit message element
-const visitMessage = document.getElementById('visit-message');
 
-// Get the current date in milliseconds
-const currentDate = Date.now();
+// Banner JS Code
+// Get the banner and close button elements
+const banner = document.getElementById('meet-greet-banner');
+const closeBannerButton = document.getElementById('close-banner');
 
-// Check if there is a previous visit date stored
-const lastVisitDate = localStorage.getItem('lastVisitDate');
+// Function to check if today is Monday, Tuesday, or Wednesday
+function shouldShowBanner() {
+    const today = new Date().getDay(); // 0 is Sunday, 1 is Monday, etc.
+    return today === 1 || today === 2 || today === 6; // Mon, Tue, Wed
+}
 
-if (!lastVisitDate) {
-    // First visit
-    visitMessage.innerHTML = "Welcome! Let us know if you have any questions.";
-} else {
-    // Calculate the time difference
-    const timeDifference = currentDate - lastVisitDate;
-    const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24)); // Convert milliseconds to days
+// Function to show the banner
+function displayBanner() {
+    const lastClosedDate = localStorage.getItem('bannerClosedDate');
+    const todayDate = new Date().toDateString();
 
-    if (daysDifference < 1) {
-        // Less than a day
-        visitMessage.innerHTML = "Back so soon! Awesome!";
-    } else {
-        // More than a day
-        visitMessage.innerHTML = `You last visited ${daysDifference} ${daysDifference === 1 ? "day" : "days"} ago.`;
+    // Show the banner if it's the correct day and it hasn't been closed today
+    if (shouldShowBanner() && lastClosedDate !== todayDate) {
+        banner.classList.remove('hidden');
     }
 }
 
-// Store the current visit date
-localStorage.setItem('lastVisitDate', currentDate);
-*/
+// Event listener to close the banner
+closeBannerButton.addEventListener('click', () => {
+    banner.classList.add('hidden'); // Hide the banner
+    const todayDate = new Date().toDateString();
+    localStorage.setItem('bannerClosedDate', todayDate); // Store the close date
+});
+
+// Call displayBanner on page load
+displayBanner();
 
 
-// directory code
+//Discover JS code
+
+// Discover Page Visit Message Code
+const visitMessage = document.getElementById('visit-message');
+
+if (visitMessage) {  // Run only if the element exists
+    const currentDate = Date.now();
+    const lastVisitDate = localStorage.getItem('lastVisitDate');
+
+    if (!lastVisitDate) {
+        visitMessage.innerHTML = "Welcome! Let us know if you have any questions.";
+    } else {
+        const timeDifference = currentDate - lastVisitDate;
+        const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+        if (daysDifference < 1) {
+            visitMessage.innerHTML = "Back so soon! Awesome!";
+        } else {
+            visitMessage.innerHTML = `You last visited ${daysDifference} ${daysDifference === 1 ? "day" : "days"} ago.`;
+        }
+    }
+    localStorage.setItem('lastVisitDate', currentDate);
+}
+
+
+
+// Directory code
+
 const directoryContainer = document.getElementById('directory-container');
 const gridViewBtn = document.getElementById('grid-view');
 const listViewBtn = document.getElementById('list-view');
 
-// Fetch and display members
-async function getMembers() {
-    const response = await fetch('data/members.json');
-    const data = await response.json();
-    displayMembers(data.members);
+if (directoryContainer) {  // Only run this code if directoryContainer exists
+    // Fetch and display members
+    async function getMembers() {
+        const response = await fetch('data/members.json');
+        const data = await response.json();
+        displayMembers(data.members);
+    }
+
+    function displayMembers(members) {
+        directoryContainer.innerHTML = ''; // Clear previous content
+
+        members.forEach(member => {
+            const memberCard = document.createElement('div');
+            memberCard.classList.add('member-card');
+
+            memberCard.innerHTML = `
+                <img src="images/${member.image}" alt="${member.name}">
+                <h3>${member.name}</h3>
+                <p>Address: ${member.address}</p>
+                <p>Phone: ${member.phone}</p>
+                <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
+                <p>Membership Level: ${member.membershipLevel}</p>
+            `;
+
+            directoryContainer.appendChild(memberCard);
+        });
+    }
+
+    // Make sure the buttons exist before adding the events
+    if (gridViewBtn && listViewBtn) {
+        gridViewBtn.addEventListener('click', () => {
+            directoryContainer.classList.add('directory-grid');
+            directoryContainer.classList.remove('directory-list');
+        });
+
+        listViewBtn.addEventListener('click', () => {
+            directoryContainer.classList.add('directory-list');
+            directoryContainer.classList.remove('directory-grid');
+        });
+    }
+
+    // Call function to show members
+    getMembers();
 }
 
-function displayMembers(members) {
-    directoryContainer.innerHTML = ''; // Clear previous content
-
-    members.forEach(member => {
-        const memberCard = document.createElement('div');
-        memberCard.classList.add('member-card');
-
-        memberCard.innerHTML = `
-            <img src="images/${member.image}" alt="${member.name}">
-            <h3>${member.name}</h3>
-            <p>Address: ${member.address}</p>
-            <p>Phone: ${member.phone}</p>
-            <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
-            <p>Membership Level: ${member.membershipLevel}</p>
-        `;
-
-        directoryContainer.appendChild(memberCard);
-    });
-}
-
-// Make sure the buttons exist before adding the events
-if (gridViewBtn && listViewBtn) {
-    gridViewBtn.addEventListener('click', () => {
-        directoryContainer.classList.add('directory-grid');
-        directoryContainer.classList.remove('directory-list');
-    });
-
-    listViewBtn.addEventListener('click', () => {
-        directoryContainer.classList.add('directory-list');
-        directoryContainer.classList.remove('directory-grid');
-    });
-}
-
-// Call funtion to show
-getMembers();
 
 //Weather JS code
 const apiKey = '815fbb06782bb6c9f36fd4a8ca6dc311';
@@ -105,6 +137,12 @@ const lat = 3.45;
 const lon = -76.53;
 const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+const weatherContainer = document.querySelector('.weather-container'); // Adjust selector as needed
+
+if (weatherContainer) {  // Run only if the element exists
+    fetchWeatherData();
+}
 
 async function fetchWeatherData() {
     try {
@@ -148,6 +186,12 @@ fetchWeatherData();
 
 //Member Spotligths JS code
 // Fetch members from JSON
+const spotlightContainer = document.querySelector('.spotlight-cards');
+
+if (spotlightContainer) {  // Run only if the element exists
+    getMembersForSpotlight();
+}
+
 async function getMembersForSpotlight() {
     const response = await fetch('data/members.json');
     const data = await response.json();
@@ -156,18 +200,18 @@ async function getMembersForSpotlight() {
 
 // Filter and randomly select 2-3 'silver' or 'gold' members
 function displaySpotlightMembers(members) {
-    // Filtrar miembros con niveles de membresía "Gold" o "Silver"
+    // Filter members with "Gold" or "Silver" membership levels
     const qualifiedMembers = members.filter(member => member.membershipLevel === 'Gold' || member.membershipLevel === 'Silver');
     
-    // Mezclar los miembros calificados
+    // Mix the qualified members
     shuffleArray(qualifiedMembers);
     
-    // Seleccionar aleatoriamente 2 o 3 miembros
+    // Randomly select 2 or 3 members
     const selectedMembers = qualifiedMembers.slice(0, 3);
     
-    // Mostrar los miembros seleccionados en el contenedor de spotlights
+    // Display selected members in the spotlight container
     const spotlightContainer = document.querySelector('.spotlight-cards');
-    spotlightContainer.innerHTML = ''; // Limpiar contenido previo
+    spotlightContainer.innerHTML = ''; 
 
     selectedMembers.forEach(member => {
         const memberCard = document.createElement('div');
@@ -183,7 +227,7 @@ function displaySpotlightMembers(members) {
     });
 }
 
-// Función para mezclar el array de miembros (Fisher-Yates shuffle)
+// Function to shuffle the array of members (Fisher-Yates shuffle)
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -191,5 +235,5 @@ function shuffleArray(array) {
     }
 }
 
-// Ejecutar al cargar la página
+// Run on page load
 getMembersForSpotlight();
