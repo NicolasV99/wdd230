@@ -200,7 +200,14 @@ nav {
 
 /*END CTA BLOCK SECTION CODE*/
 
+/*BANNER CODE*/
+.banner:hover{
+    transform: scale(0.98); /* Zoom out al hacer hover */
+        transition: transform 0.3s ease; /* Suavizar el efecto */
+}
 
+
+/*END ABNNER CODE*/
 
 /*START DISCOVER PAGE CODE*/
 

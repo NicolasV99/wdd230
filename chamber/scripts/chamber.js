@@ -28,7 +28,7 @@ const closeBannerButton = document.getElementById('close-banner');
 // Function to check if today is Monday, Tuesday, or Wednesday
 function shouldShowBanner() {
     const today = new Date().getDay(); // 0 is Sunday, 1 is Monday, etc.
-    return today === 1 || today === 2 || today === 6; // Mon, Tue, Wed
+    return today === 1 || today === 2 || today === 3; // Mon, Tue, Wed
 }
 
 // Function to show the banner

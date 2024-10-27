@@ -385,31 +385,38 @@ nav .logo img {
 
 /*BANNER CODE*/
 
-/* Basic styling for the banner */
 .banner {
-    background-color: #f3f3f3; /* Example color */
-    color: #000; /* Text color */
-    padding: 10px;
+    background-color: #f3f3f3; 
+    color: #002349;
+    padding: 10px 40px 10px 10px; 
     text-align: center;
     position: fixed;
     width: 100%;
+    margin-top: 4px;
     top: 0;
     left: 0;
     z-index: 1000;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #002349;
+    border-radius: 10px;
 }
 
-/* Hide the banner by default */
-.hidden {
-    display: none;
+.banner p {
+    margin: 0;
 }
 
 .banner button {
     background: transparent;
     border: none;
     color: #002349;
-    font-weight: bold;
-    margin-left: 20px;
+    font-size: 1.2rem;
     cursor: pointer;
+    position: absolute;
+    right: 15px; /* Ubicar botón al lado derecho */
+    top: 50%;
+    transform: translateY(-50%); /* Centrar verticalmente */
 }
 
 
