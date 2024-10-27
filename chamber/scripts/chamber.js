@@ -135,22 +135,19 @@ if (weatherContainer) {  // Run only if the element exists
 
 async function fetchWeatherData() {
     try {
-        // Obtener clima actual
+        
         const response = await fetch(weatherUrl);
         const data = await response.json();
 
-        // Mostrar clima actual
         const temp = data.main.temp.toFixed(1);
         const description = data.weather[0].description;
         document.querySelector('.weather-content').innerHTML = `
             <p>🌡️ <b>${temp}°C</b> -☁️ ${description}</p>
         `;
 
-        // Obtener pronóstico de 3 días
         const forecastResponse = await fetch(forecastUrl);
         const forecastData = await forecastResponse.json();
 
-        // Filtrar pronóstico de 3 días (cada 24 horas)
         const forecastList = forecastData.list.filter(item => item.dt_txt.includes('12:00:00')).slice(0, 3);
 
         let forecastHTML = '<h3>3-Day Forecast</h3>';

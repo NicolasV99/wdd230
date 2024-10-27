@@ -414,9 +414,9 @@ nav .logo img {
     font-size: 1.2rem;
     cursor: pointer;
     position: absolute;
-    right: 15px; /* Ubicar botón al lado derecho */
+    right: 15px;
     top: 50%;
-    transform: translateY(-50%); /* Centrar verticalmente */
+    transform: translateY(-50%); 
 }
 
 /*END BANNER CODE*/
