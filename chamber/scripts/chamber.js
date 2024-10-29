@@ -153,17 +153,17 @@ async function fetchWeatherData() {
 function getMembersForSpotlight() {
     const spotlightContainer = document.querySelector('.spotlight-cards');
 
-    // Verificar si el contenedor de spotlight existe antes de ejecutar el código
+    // Check if the spotlight container exists before running the code
     if (!spotlightContainer) {
         console.log("Spotlight container not found on this page. Skipping spotlight functionality.");
-        return; // Salir de la función si el contenedor no existe
+        return; 
     }
 
-    // Resto de la lógica para obtener y mostrar los miembros spotlight
+    // Rest of the logic to get and display the spotlight members
     fetch('data/members.json')
         .then(response => response.json())
         .then(data => {
-            // Accede a `data.members` porque el JSON tiene la propiedad `members`
+            // Access `data.members` because the JSON has the `members` property
             displaySpotlightMembers(data.members);
         })
         .catch(error => console.error("Error fetching members data:", error));
