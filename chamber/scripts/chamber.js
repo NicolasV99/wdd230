@@ -1,48 +1,29 @@
 // Update the current year
 const currentYearElement = document.getElementById('currentYear');
 const currentYear = new Date().getFullYear();
-currentYearElement.textContent = currentYear;
+if (currentYearElement) {
+    currentYearElement.textContent = currentYear;
+}
 
 // Update the last modified date
 const lastModifiedElement = document.getElementById('lastModified');
 const lastModifiedDate = new Date(document.lastModified);
-lastModifiedElement.textContent = `Last Modification: ${lastModifiedDate.toLocaleDateString()} ${lastModifiedDate.toLocaleTimeString()}`;
-
-
+if (lastModifiedElement) {
+    lastModifiedElement.textContent = `Last Modification: ${lastModifiedDate.toLocaleDateString()} ${lastModifiedDate.toLocaleTimeString()}`;
+}
 
 // Toggle burger menu and X icon
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-links');
 
-burger.addEventListener('click', () => {
-    nav.classList.toggle('nav-active');
-    burger.classList.toggle('toggle'); 
-});
-
-
-
-//Banner JS code
-const banner = document.createElement('div');
-banner.id = 'meet-greet-banner';
-banner.innerHTML = `
-    <p>Join us for the Chamber of Commerce meet and greet on Wednesday at 7:00 p.m. <span id="close-banner" style="cursor: pointer; margin-left: 10px;">❌</span></p>
-`;
-
-const currentDay = new Date().getDay();
-
-if (currentDay === 1 || currentDay === 2 || currentDay === 3) {
-    document.body.prepend(banner);
-
-    const closeButton = document.getElementById('close-banner');
-    if (closeButton) {
-        closeButton.addEventListener('click', () => {
-            banner.style.display = 'none';
-        });
-    }
+if (burger && nav) {
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('nav-active');
+        burger.classList.toggle('toggle'); 
+    });
 }
 
-//Discover JS code
-// Discover Page Visit Message Code
+// Discover JS code
 const visitMessage = document.getElementById('visit-message');
 
 if (visitMessage) {  // Run only if the element exists
@@ -64,10 +45,7 @@ if (visitMessage) {  // Run only if the element exists
     localStorage.setItem('lastVisitDate', currentDate);
 }
 
-
-
 // Directory code
-
 const directoryContainer = document.getElementById('directory-container');
 const gridViewBtn = document.getElementById('grid-view');
 const listViewBtn = document.getElementById('list-view');
@@ -117,15 +95,13 @@ if (directoryContainer) {  // Only run this code if directoryContainer exists
     getMembers();
 }
 
-
 //Weather JS code
 const apiKey = '815fbb06782bb6c9f36fd4a8ca6dc311';
 const lat = 3.45;
 const lon = -76.53;
 const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-
-const weatherContainer = document.querySelector('.weather-container'); // Adjust selector as needed
+const weatherContainer = document.querySelector('.weather-content'); // Adjust selector as needed
 
 if (weatherContainer) {  // Run only if the element exists
     fetchWeatherData();
@@ -133,53 +109,64 @@ if (weatherContainer) {  // Run only if the element exists
 
 async function fetchWeatherData() {
     try {
-        
         const response = await fetch(weatherUrl);
         const data = await response.json();
 
         const temp = data.main.temp.toFixed(1);
         const description = data.weather[0].description;
-        document.querySelector('.weather-content').innerHTML = `
-            <p>🌡️ <b>${temp}°C</b> -☁️ ${description}</p>
-        `;
 
-        const forecastResponse = await fetch(forecastUrl);
-        const forecastData = await forecastResponse.json();
-
-        const forecastList = forecastData.list.filter(item => item.dt_txt.includes('12:00:00')).slice(0, 3);
-
-        let forecastHTML = '<h3>3-Day Forecast</h3>';
-        forecastList.forEach(day => {
-            const date = new Date(day.dt_txt).toLocaleDateString('en-GB', { weekday: 'long', month: 'short', day: 'numeric' });
-            const dayTemp = day.main.temp.toFixed(1);
-            const dayDescription = day.weather[0].description;
-            forecastHTML += `
-                <p><b>${date}:</b> ${dayTemp}°C - ${dayDescription}</p>
+        const weatherContent = document.querySelector('.weather-content');
+        if (weatherContent) {
+            weatherContent.innerHTML = `
+                <p>🌡️ <b>${temp}°C</b> -☁️ ${description}</p>
             `;
-        });
 
-        document.querySelector('.weather-content').innerHTML += forecastHTML;
+            const forecastResponse = await fetch(forecastUrl);
+            const forecastData = await forecastResponse.json();
+
+            const forecastList = forecastData.list.filter(item => item.dt_txt.includes('12:00:00')).slice(0, 3);
+
+            let forecastHTML = '<h3>3-Day Forecast</h3>';
+            forecastList.forEach(day => {
+                const date = new Date(day.dt_txt).toLocaleDateString('en-GB', { weekday: 'long', month: 'short', day: 'numeric' });
+                const dayTemp = day.main.temp.toFixed(1);
+                const dayDescription = day.weather[0].description;
+                forecastHTML += `
+                    <p><b>${date}:</b> ${dayTemp}°C - ${dayDescription}</p>
+                `;
+            });
+
+            weatherContent.innerHTML += forecastHTML;
+        }
 
     } catch (error) {
         console.error('Error fetching weather data:', error);
-        document.querySelector('.weather-content').innerHTML = '<p>Error loading weather data.</p>';
+        const weatherContent = document.querySelector('.weather-content');
+        if (weatherContent) {
+            weatherContent.innerHTML = '<p>Error loading weather data.</p>';
+        }
     }
 }
 
-fetchWeatherData();
-
-//Member Spotligths JS code
+//Member Spotlights JS code
 // Fetch members from JSON
-const spotlightContainer = document.querySelector('.spotlight-cards');
+function getMembersForSpotlight() {
+    const spotlightContainer = document.querySelector('.spotlight-cards');
 
-if (spotlightContainer) {  // Run only if the element exists
-    getMembersForSpotlight();
-}
+    // Verificar si el contenedor de spotlight existe antes de ejecutar el código
+    if (!spotlightContainer) {
+        console.log("Spotlight container not found on this page. Skipping spotlight functionality.");
+        return; // Salir de la función si el contenedor no existe
+    }
 
-async function getMembersForSpotlight() {
-    const response = await fetch('data/members.json');
-    const data = await response.json();
-    displaySpotlightMembers(data.members);
+    // Resto de la lógica para obtener y mostrar los miembros spotlight
+    fetch('data/members.json')
+        .then(response => response.json())
+        .then(data => {
+            // Accede a `data.members` porque el JSON tiene la propiedad `members`
+            displaySpotlightMembers(data.members);
+        })
+        .catch(error => console.error("Error fetching members data:", error));
 }
 
 // Filter and randomly select 2-3 'silver' or 'gold' members
