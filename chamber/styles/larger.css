@@ -201,6 +201,12 @@ nav {
 /*END CTA BLOCK SECTION CODE*/
 
 /*BANNER CODE*/
+
+.banner p {
+    margin: 0;
+    font-size: 16px;
+}
+
 .banner:hover{
     transform: scale(0.98); 
     transition: transform 0.3s ease; 

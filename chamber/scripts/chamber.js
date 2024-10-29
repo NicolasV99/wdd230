@@ -208,3 +208,25 @@ function shuffleArray(array) {
 
 // Run on page load
 getMembersForSpotlight();
+
+
+// JavaScript for displaying the banner only on Monday, Tuesday, and Wednesday
+document.addEventListener("DOMContentLoaded", () => {
+    const banner = document.getElementById("meet-greet-banner");
+    const closeBannerBtn = document.getElementById("close-banner-btn");
+
+    // Function to check the current day and show the banner if it's Mon, Tue, or Wed
+    function showBannerOnSelectedDays() {
+        const today = new Date().getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+        if (today === 1 || today === 2 || today === 3) {
+            banner.style.display = "flex"; // Show the banner
+        }
+    }
+
+    // Event listener to close the banner
+    closeBannerBtn.addEventListener("click", () => {
+        banner.style.display = "none"; // Hide the banner when close button is clicked
+    });
+
+    showBannerOnSelectedDays();
+});
